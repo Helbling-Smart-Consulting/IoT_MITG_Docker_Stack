@@ -46,6 +46,9 @@ services:
   node-red:
     container_name: Node-Red
     image: nodered/node-red:latest
+    command:
+      - "--settings"
+      - "/settings/settings.js"
     environment:
       - TZ=Europe/Zurich
       - INFLUX_ENDPOINT=${INFLUX_ENDPOINT}
