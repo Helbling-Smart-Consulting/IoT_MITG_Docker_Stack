@@ -69,7 +69,7 @@ services:
   telegraf:
     image: telegraf
     links:
-      - influxdb
+      - influx
     volumes:
       # Mount for telegraf config
       - ./telegraf/mytelegraf.conf:/etc/telegraf/telegraf.conf
